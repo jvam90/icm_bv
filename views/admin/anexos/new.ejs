@@ -1,0 +1,16 @@
+<% include ../../partials/headerAdmin %>
+
+    <h1 class="header-titulo">Cadastrar novo anexo</h1>
+    <form method="POST" action="/admin/anexo" class="centralizarForm">
+        <div class="form-group">
+            <label>Descrição do anexo</label>
+            <input type="text" class="form-control" name="descricao"> 
+        </div>
+        <div class="form-group">
+            <label>Link:</label>
+            <input type="text" class="form-control" name="link">
+        </div>
+        <button class="btn btn-danger btn-lg">Cadastrar</button>       
+    </form>
+    
+<% include ../../partials/footerAdmin %>

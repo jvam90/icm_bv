@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/materialize_datatable.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+</head>
+<header>
+    <nav class="red">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">ICM-BV</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="/quemsomos">Quem Somos</a>
+                    </li>
+                    <li>
+                        <a href="/contato">Contato</a>
+                    </li>
+                    <li>
+                        <a href="/arquivos">Downloads </a>
+                    </li>
+                    <li>
+                        <a href="/lemas">Lemas do ano </a>
+                    </li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li>
+                        <a href="/quemsomos">Quem Somos</a>
+                    </li>
+                    <li>
+                        <a href="/contato">Contato</a>
+                    </li>
+                    <li>
+                        <a href="/arquivos">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="/lemas">Lemas do ano </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="slider">
+    <ul class="slides">
+        <li>
+            <img src="img/foto3.jpg">
+        </li>
+        <li>
+            <img src="img/foto4.jpg">
+        </li>
+        <li>
+            <img src="img/foto6.jpg">
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <% if(msgErro && msgErro.length > 0) { %>
+        <div class="row">
+            <div class="s12">
+                <div class="card red aviso valign-wrapper">
+                    <p>
+                        <%= msgErro%>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <% } %>
+            <% if(msgSucesso && msgSucesso.length > 0) { %>
+                <div class="row">
+                    <div class="s12">
+                        <div class="card green aviso aviso valign-wrapper">
+                            <p>
+                                <%= msgSucesso%>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+</div>

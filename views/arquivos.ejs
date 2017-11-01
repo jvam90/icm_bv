@@ -1,0 +1,35 @@
+<% include partials/headerPublic %>
+    <main>
+        <div class="row">
+            <div id="admin" class="col s12">
+                <div class="card material-table">
+                    <div class="table-header">
+                        <span class="table-title">Arquivos para download</span>
+                        <div class="actions">
+                            <a href="#" class="search-toggle waves-effect btn-flat nopadding">
+                                <i class="material-icons">search</i>
+                            </a>
+                        </div>
+                    </div>
+                    <table id="datatable">
+                        <thead>
+                            <tr>
+                                <th>Descrição</th>
+                                <th>Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% arquivos.forEach(function(anexo){ %>
+                                <tr>
+                                    <td><%=anexo.descricao %></td>
+                                    <td><a target="_blank" class="red-text" href="<%=anexo.link%>">Download</a></td>
+                                </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <% include partials/footerPublic %>

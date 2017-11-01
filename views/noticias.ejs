@@ -1,0 +1,19 @@
+<% include partials/header %>
+
+<div class="espacamento">
+    <% noticias.forEach(function(noticia){ %>
+        
+            <div class="row ">
+                <div class="col-sm-8 blog-main">
+                    <div class="blog-post">
+                        <h2 class="blog-post-title"><%= noticia.titulo %></h2>
+                        <p class="blog-post-meta"> <%= moment(noticia.criadoEm).fromNow() %></p>
+                        <p><%- noticia.mensagem %></p>
+                    </div>
+                </div>
+            </div>    
+                    
+        <% }); %>
+</div>
+
+<% include partials/footer %>

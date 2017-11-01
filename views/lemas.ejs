@@ -1,0 +1,49 @@
+<% include partials/headerPublic %>
+
+    <main>
+        <main>
+            <div class="row">
+                <div id="admin" class="col s12">
+                    <div class="card material-table">
+                        <div class="table-header">
+                            <span class="table-title">Lemas do ano</span>
+                            <div class="actions">
+                                <a href="#" class="search-toggle waves-effect btn-flat nopadding">
+                                    <i class="material-icons">search</i>
+                                </a>
+                            </div>
+                        </div>
+                        <table id="datatable">
+                            <thead>
+                                <tr>
+                                    <th>Ano</th>
+                                    <th>Texto</th>
+                                    <th>Lema</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% lemas.forEach(function(lema){ %>
+                                    <tr>
+                                        <td>
+                                            <%= lema.ano %>
+                                        </td>
+                                        <td>
+                                            <%= lema.texto %>
+                                        </td>
+                                        <td>
+                                            <%= lema.versiculo %>
+                                        </td>
+                                    </tr>
+                                    <% }); %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </main>
+
+
+
+
+    <% include partials/footerPublic %>
